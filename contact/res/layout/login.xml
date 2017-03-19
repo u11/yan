@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/header_text"
+        layout="@layout/mainheader" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_text"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="100.0" >
+
+        <ScrollView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="90.0"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30.0dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="200.0dip"
+                        android:layout_height="150.0dip"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/logo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_textfield_background"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <EditText
+                            android:id="@+id/txtusername"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableLeft="@drawable/icon_username"
+                            android:drawablePadding="10.0dip"
+                            android:ems="15"
+                            android:hint="@string/input_username"
+                            android:padding="10.0dip"
+                            android:singleLine="true"
+                           />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_below="@+id/txtusername"
+                            android:background="@color/content_border" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <EditText
+                            android:id="@+id/txtpassword"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableLeft="@drawable/icon_password"
+                            android:drawablePadding="10.0dip"
+                            android:ems="15"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:padding="10.0dip"
+                            android:singleLine="true"
+                            android:textSize="@dimen/content_normal_textsize" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <RadioButton
+                        android:id="@+id/radiojs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="教师" />
+
+                    <RadioButton
+                        android:id="@+id/radioxs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="学生" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/zhuce"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#194C7E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注册" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:orientation="vertical"
+                    android:weightSum="100.0" >
+
+                    <Button
+                        android:id="@+id/login_bt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/common_button_height"
+                        android:background="@drawable/btn_blue_pressed_style"
+                        android:text="@string/login"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/content_normal_textsize" />
+
+                    <Button
+                        android:id="@+id/login_reg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/common_button_height"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_blue_pressed_style"
+                        android:text="@string/reg"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/content_normal_textsize"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/copyright"
+                        android:textColor="@color/text_gray"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

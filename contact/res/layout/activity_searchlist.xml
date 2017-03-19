@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        style="@style/title_bar_style1"
+        android:layout_width="fill_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip" >
+
+        <EditText
+            android:id="@+id/search_editer"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:layout_gravity="left|center"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/edit_search_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="输入搜索内容"
+            android:imeOptions="actionSearch"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="40dp"
+            android:layout_height="30dip"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_search_bg" />
+    </FrameLayout>
+
+    <me.maxwin.view.PullListView
+        android:id="@+id/ck_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EEE"
+        android:divider="#EEE"
+        android:dividerHeight="2dp" >
+    </me.maxwin.view.PullListView>
+
+</LinearLayout>
